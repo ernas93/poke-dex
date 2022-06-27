@@ -1,4 +1,26 @@
-alert('Hello World');
+let pokemonList = [
+    {
+        name: 'Squirtle',
+        height: 0.5,
+        types: [
+            'WATER'
+        ]
+    },
+    {   
+        name: 'Pikachu',
+        height: 0.4,
+        types: [
+            'ELECTRIC'
+        ]
 
-let favoriteFood = 'Burek, bosnian pie, made with thin dough rolled in circle filled with minced meat.';
-document.write(favoriteFood);
+    },
+    {
+        name: 'Jigglypuff',
+        height: 0.5,
+        types: [
+            'FAIRY', 
+            'NORMAL'
+        ]
+
+    }
+];
