@@ -1,9 +1,9 @@
 let pokemonList = [
     {
-        name: 'Squirtle',
-        height: 0.5,
+        name: 'Chansey',
+        height: 1.1,
         types: [
-            'WATER'
+            'NORMAL'
         ]
     },
     {   
@@ -24,3 +24,13 @@ let pokemonList = [
 
     }
 ];
+
+// this loop iterates over pokemonList and writes their names and height
+for (let i=0; i<pokemonList.length; i++) {
+    //writes special text for pokemons with a height over 1
+    if (pokemonList[i].height>1) {
+        document.write('<p>' + pokemonList[i].name + ' (height: ' + pokemonList[i].height + ') - Wow, that\'s big!')
+    } else {
+        document.write('<p>' + pokemonList[i].name + ' (height: ' + pokemonList[i].height + ')</p>')
+    }
+}
