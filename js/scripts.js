@@ -1,29 +1,44 @@
-let pokemonList = [
-    {
-        name: 'Chansey',
-        height: 1.1,
-        types: [
-            'NORMAL'
-        ]
-    },
-    {   
-        name: 'Pikachu',
-        height: 0.4,
-        types: [
-            'ELECTRIC'
-        ]
+let pokemonRepository = (function () {
+    let pokemonList = [
+        {
+            name: 'Chansey',
+            height: 1.1,
+            types: [
+                'NORMAL'
+            ]
+        },
+        {   
+            name: 'Pikachu',
+            height: 0.4,
+            types: [
+                'ELECTRIC'
+            ]
 
-    },
-    {
-        name: 'Jigglypuff',
-        height: 0.5,
-        types: [
-            'FAIRY', 
-            'NORMAL'
-        ]
+        },
+        {
+            name: 'Jigglypuff',
+            height: 0.5,
+            types: [
+                'FAIRY', 
+                'NORMAL'
+            ]
 
+        }
+    ];
+
+    function getAll() {
+        return pokemonList;
     }
-];
+
+    function add(pokemon) {
+        pokemonList.push(pokemon);
+    }
+
+    return {
+        getAll: getAll,
+        add: add
+    }
+})();
 
 // KEEPING THIS HERE FOR FUTURE REFERENCES
 // // this loop iterates over pokemonList and writes their names and height
@@ -36,6 +51,8 @@ let pokemonList = [
 //     }
 // }
 
+let pokemonList = pokemonRepository.getAll();
+
 pokemonList.forEach(function(pokemon) {
     if (pokemon.height>1) {
         document.write('<p>' + pokemon.name + ', height: ' + pokemon.height + ' - Wow, that\'s big!' + '</p>')
@@ -43,4 +60,4 @@ pokemonList.forEach(function(pokemon) {
         document.write('<p>' + pokemon.name + ', height: ' + pokemon.height + '</p>')
 
     }
-})
+});
