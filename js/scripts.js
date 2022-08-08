@@ -25,12 +25,22 @@ let pokemonList = [
     }
 ];
 
-// this loop iterates over pokemonList and writes their names and height
-for (let i=0; i<pokemonList.length; i++) {
-    //writes special text for pokemons with a height over 1
-    if (pokemonList[i].height>1) {
-        document.write('<p>' + pokemonList[i].name + ' (height: ' + pokemonList[i].height + ') - Wow, that\'s big!')
+// KEEPING THIS HERE FOR FUTURE REFERENCES
+// // this loop iterates over pokemonList and writes their names and height
+// for (let i=0; i<pokemonList.length; i++) {
+//     //writes special text for pokemons with a height over 1
+//     if (pokemonList[i].height>1) {
+//         document.write('<p>' + pokemonList[i].name + ' (height: ' + pokemonList[i].height + ') - Wow, that\'s big!' + '</p>')
+//     } else {
+//         document.write('<p>' + pokemonList[i].name + ' (height: ' + pokemonList[i].height + ')</p>')
+//     }
+// }
+
+pokemonList.forEach(function(pokemon) {
+    if (pokemon.height>1) {
+        document.write('<p>' + pokemon.name + ', height: ' + pokemon.height + ' - Wow, that\'s big!' + '</p>')
     } else {
-        document.write('<p>' + pokemonList[i].name + ' (height: ' + pokemonList[i].height + ')</p>')
+        document.write('<p>' + pokemon.name + ', height: ' + pokemon.height + '</p>')
+
     }
-}
+})
