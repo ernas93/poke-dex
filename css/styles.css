@@ -1,0 +1,42 @@
+:root {
+    --primary-color: yellow;
+    --secondary-color: rgb(222, 140, 26);
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+.pokemon-header {
+    background-color: var(--primary-color);
+    padding: 7px;
+}
+
+.pokedex {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pokemon-button {
+    border: none;
+    background-color: var(--primary-color);
+    font-size: 20px;
+    margin-bottom: 3px ;
+    padding: 12px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.pokemon-button:hover {
+    background-color: var(--secondary-color);
+}
+
+.pokemon-list {
+    list-style-type: none;
+    width: 90%;
+    max-width: 500px;
+    margin: 0;
+    padding: 0;
+}
