@@ -53,7 +53,7 @@ let pokemonRepository = (function () {
 
     // going to add more in a later task
     function showDetails(pokemon) {
-        console.log(pokemon);
+        console.log(pokemon.name);
     };
 
     return {
