@@ -20,18 +20,18 @@ body {
 }
 
 .pokemon-button {
-    border: none;
-    background-color: var(--primary-color);
+    /* border: none; */
+    /* background-color: var(--primary-color); */
     font-size: 20px;
-    margin-bottom: 3px ;
+    /* margin-bottom: 3px ; */
     padding: 12px;
     width: 100%;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
-.pokemon-button:hover {
+/* .pokemon-button:hover {
     background-color: var(--secondary-color);
-}
+} */
 
 .pokemon-list {
     list-style-type: none;

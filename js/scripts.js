@@ -15,9 +15,12 @@ let pokemonRepository = (function () {
     function addListItem(pokemon) {
         //creating a list item (pokemons) with a button
         let listItem = document.createElement('li');
+        listItem.classList.add('list-group-item');
         let button = document.createElement('button');
         button.innerText = pokemon.name;
         button.classList.add('pokemon-button');
+        button.classList.add('btn');
+        button.classList.add('btn-warning');
         // add button to list item and add item(pokemon) to the pokemon list elements in index.html
         listItem.appendChild(button);
         pokemonListElement.appendChild(listItem);
