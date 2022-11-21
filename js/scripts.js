@@ -51,7 +51,8 @@ let pokemonRepository = (function () {
             return response.json();
         }).then(function(details) {
             item.height = details.height;
-            item.types = details.types;
+            item.types = details.types.map((type) => type.type.name);
+            item.abilities = details.abilities.map((abilities) => abilities.ability.name);
             item.imageUrl = details.sprites.front_default;
         }).catch(function(e) {
             console.error(e);
@@ -69,15 +70,19 @@ let pokemonRepository = (function () {
         let modalBody = $('.modal-body');
         let modalTitle = $('.modal-title');
 
-        modalBody.text('');
+        modalBody.empty();
         modalTitle.text(pokemon.name);
 
         let height = $('<p>' + 'Height: ' + pokemon.height + '</p>');
-        let image = $('<img src="' + pokemon.imageUrl + '" />');
+        let image = $('<img class="pokemon-img" src="' + pokemon.imageUrl + '" />');
+        let types = $('<p>' + 'Types: ' + pokemon.types + '</p>');
+        let abilities = $('<p>' + 'Abilities: ' + pokemon.abilities + '</p>');
 
         // appends the above elements to the modal body
-        modalBody.append(height);
         modalBody.append(image);
+        modalBody.append(height);
+        modalBody.append(types);
+        modalBody.append(abilities);
     }
 
     return {

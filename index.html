@@ -10,11 +10,16 @@
         <link rel="stylesheet" type="text/css" href="css/styles.css">
     </head>
     <body>
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+              <a class="navbar-brand" href="#">HOME</a>
+            </div>
+        </nav>
         <div class="pokedex">
             <h1 class="pokemon-header">Pokedex</h1>
             <ul class="pokemon-list list-group"></ul>
         </div>
-        <div class="modal fade" id="pokemon-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="pokemon-modal" tabindex="-1" role="dialog" aria-labelledby="pokemon-modal" aria-modal="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
