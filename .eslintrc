@@ -15,5 +15,6 @@
     "prettier/prettier": ["error", {
       "singleQuote": true
     }]
-  }
+  },
+  "ignorePatterns": ["dist"]
 }
