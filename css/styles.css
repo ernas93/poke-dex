@@ -1,11 +1,13 @@
 :root {
     --primary-color: yellow;
-    --secondary-color: rgb(222, 140, 26);
+    --secondary-color: #142231;
+    --background-color: #377dc8;
 }
 
 body {
     margin-top: 60px;
     font-family: 'Lato', sans-serif;
+    background-color: var(--background-color);
 }
 
 .pokemon-header {
@@ -24,17 +26,35 @@ body {
     font-size: 20px;
     padding: 12px;
     width: 100%;
+    background-color: var(--primary-color);
 }
 
 .pokemon-list {
     list-style-type: none;
-    width: 90%;
-    max-width: 500px;
     margin: 0;
     padding: 0;
+    display: grid;
+    width: 90%;
+    max-width: 1280px;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, 300px);
 }
 
 .pokemon-img {
     width: 150px;
     height: 150px;
+}
+
+.list-group-item {
+    background: none;
+    border: none;
+}
+
+.modal-content {
+    background: var(--secondary-color);
+    color: white;
+}
+
+.modal-content .close {
+    color: white;
 }

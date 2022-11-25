@@ -20,7 +20,6 @@ let pokemonRepository = (function () {
         pokemon.name +
         '</button>'
     );
-
     // add button to list item and add item(pokemon) to the pokemon list elements in index.html
     listItem.append(button);
     pokemonListElement.append(listItem);
